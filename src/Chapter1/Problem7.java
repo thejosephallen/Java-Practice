@@ -28,19 +28,11 @@ public class Problem7{
 		int row = 0;
 		int col = 0;
 		while (index < size) {
-			while (col < high) {
-				spiralVector[index++] = mat[row][col++];				
-			}
+			while (col < high) spiralVector[index++] = mat[row][col++];
 			col--;
-			while(row < high - 1) {
-				spiralVector[index++] = mat[++row][col];
-			}
-			while(col > low) {
-				spiralVector[index++] = mat[row][--col];
-			}
-			while(row > low + 1) {
-				spiralVector[index++] = mat[--row][col];
-			}
+			while(row < high - 1) spiralVector[index++] = mat[++row][col];
+			while(col > low) spiralVector[index++] = mat[row][--col];
+			while(row > low + 1) spiralVector[index++] = mat[--row][col];
 			col++;
 			high--;
 			low++;
@@ -98,7 +90,9 @@ public class Problem7{
 		int matrixSize = 5;	//NxN
 		int[][] matrix = createTestMatrix(matrixSize);
 		printMatrix(matrix, matrixSize);
-		//unravel(matrix, matrixSize);
+		/*System.out.println();
+		unravel(matrix, matrixSize);
+		System.out.println();*/
 		
 		matrix = rotate90(matrix, matrixSize);
 		

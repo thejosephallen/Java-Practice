@@ -15,7 +15,7 @@ public class Problem6 {
 	 */
 	public static String compressor(String str){
 		char[] chars = str.toCharArray();
-		int[] counts = new int[128];		// GET RID OF THIS
+		int[] counts = new int[128];		// Inefficient, try it iterating through string
 		int count = 0;
 		int numLetters = 1;
 		for (int i = 0; i < chars.length; i++){
