@@ -40,9 +40,10 @@ public class Problem7{
 		for (int elem : spiralVector) System.out.printf("%d ", elem);
 	}*/
 	
-	public static void printMatrix(int[][] mat, int n) {
-		for (int i = 0; i < n; i++) {
-			for (int j = 0; j < n; j++) {
+	public static void printMatrix(int[][] mat) {
+		System.out.println();
+		for (int i = 0; i < mat.length; i++) {
+			for (int j = 0; j < mat[0].length; j++) {
 				System.out.printf("%4d ", mat[i][j]); 
 			}
 			System.out.println();
@@ -89,7 +90,7 @@ public class Problem7{
 	public static void main(String[] args) {
 		int matrixSize = 5;	//NxN
 		int[][] matrix = createTestMatrix(matrixSize);
-		printMatrix(matrix, matrixSize);
+		printMatrix(matrix);
 		/*System.out.println();
 		unravel(matrix, matrixSize);
 		System.out.println();*/
@@ -97,7 +98,7 @@ public class Problem7{
 		matrix = rotate90(matrix, matrixSize);
 		
 		System.out.println();
-		printMatrix(matrix, matrixSize);
+		printMatrix(matrix);
 		
 	}
 	
